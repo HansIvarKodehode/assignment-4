@@ -1,7 +1,7 @@
 // debug section
-let debug = document.getElementById("debugMessage");
-let debSecId = document.getElementById("debugSection");
-let debugging = false;
+const debug = document.getElementById("debugMessage");
+const debSecId = document.getElementById("debugSection");
+const debugging = false;
 
 // debugging JS in vs code is a pain, so
 // I have found it best to use the
@@ -13,15 +13,9 @@ if (debugging) {
 }
 debug.textContent += "debugging enabled";
 
-let workingId = "";
+const workingId = "gallery";
 
-if (document.title == "Gallery Section") {
-  workingId = "gallery";
-} else {
-  workingId = "gallery";
-}
-
-let galId = document.getElementById(workingId);
+const galId = document.getElementById(workingId);
 document.addEventListener("DOMContentLoaded", () => fillTheGallery());
 
 debug.textContent += ",  id and event listener OK";
