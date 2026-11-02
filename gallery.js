@@ -3,6 +3,9 @@ let debug = document.getElementById("debugMessage");
 let debSecId = document.getElementById("debugSection");
 let debugging = false;
 
+// debugging JS in vs code is a pain, so
+// I have found it best to use the
+// html doc as a debugger
 if (debugging) {
   debSecId.style.display = "block";
 } else {
@@ -10,7 +13,15 @@ if (debugging) {
 }
 debug.textContent += "debugging enabled";
 
-let galId = document.getElementById("gallery");
+let workingId = "";
+
+if (document.title == "Gallery Section") {
+  workingId = "gallery";
+} else {
+  workingId = "gallery";
+}
+
+let galId = document.getElementById(workingId);
 document.addEventListener("DOMContentLoaded", () => fillTheGallery());
 
 debug.textContent += ",  id and event listener OK";
