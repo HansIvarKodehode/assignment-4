@@ -101,6 +101,27 @@ footer {
   padding: 10px 0 40px 0;
 }
 
+/* KH site */
+.khSite {
+  width: 98vw;
+  border: 1px black solid;
+}
+.khInfoSection {
+  width: 25%;
+  padding: 5px 0 0 10px;
+  border: 1px black solid;
+}
+#khGallery {
+  max-width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: auto;
+  border: 1px black solid;
+}
+.khImg {
+  width: 33%;
+}
+
 /* gallery site styles */
 #gallery {
   display: flex;

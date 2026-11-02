@@ -13,11 +13,12 @@ if (debugging) {
 }
 debug.textContent += "debugging enabled";
 
-const workingId = "gallery";
-const path = "./images";
-const baseName = "01";
-const first = "0";
-const last = "10";
+const workingId = "khGallery";
+const imgClass = "khImg";
+const path = "./images/kh";
+const baseName = "kh";
+const first = "1";
+const last = "59";
 const format = ".jpg";
 
 const galId = document.getElementById(workingId);
@@ -31,7 +32,7 @@ function fillTheGallery() {
   let list = [];
   let i = first;
 
-  galId.innerHTML = "";
+  // galId.innerHTML = "";
   debug.textContent += ",  loop starting";
 
   for (i; i <= last; i++) {
@@ -44,7 +45,9 @@ function fillTheGallery() {
       i +
       ")" +
       format +
-      '" alt="" class="galImg" />';
+      '" alt="" class="' +
+      imgClass +
+      '" />';
 
     galId.innerHTML += stringToAdd;
     list.push(stringToAdd);
