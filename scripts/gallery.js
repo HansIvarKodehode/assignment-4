@@ -14,17 +14,16 @@ if (debugging) {
 debug.textContent += "debugging enabled";
 
 const workingId = "gallery";
-
-const galId = document.getElementById(workingId);
-document.addEventListener("DOMContentLoaded", () => fillTheGallery());
-
-debug.textContent += ",  id and event listener OK";
-
 const path = "./images";
 const baseName = "01";
 const first = "0";
 const last = "10";
 const format = ".jpg";
+
+const galId = document.getElementById(workingId);
+document.addEventListener("DOMContentLoaded", () => fillTheGallery());
+
+debug.textContent += ",  id and event listener OK";
 
 debug.textContent += ",  const ok";
 
