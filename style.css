@@ -33,11 +33,11 @@
 } */
 
 @font-face {
-  font-family: instSer, Arial, Helvetica, sans-serif;
+  font-family: "instSer";
   src: url("fonts/InstrumentSerif-Regular.ttf");
 }
 @font-face {
-  font-family: instSerIta, Arial, Helvetica, sans-serif;
+  font-family: "instSerIta";
   src: url("fonts/InstrumentSerif-Regular.ttf");
 }
 
@@ -54,7 +54,7 @@ body {
     0 1px rgb(32, 32, 32),
     0 -1px rgb(32, 32, 32); */
   font-size: 110%;
-  font-family: instSer;
+  font-family: "instSer";
 }
 br {
   height: 0.5rem;
@@ -77,6 +77,8 @@ button {
   border: black 1px solid;
   border-radius: 25px;
   padding: 6px 12px;
+  font-size: 105%;
+  font-family: "instSer";
 }
 button:hover {
   transform: translate(0.2rem, -0.2rem);
@@ -86,8 +88,6 @@ button:hover {
 a {
   text-decoration: none;
   color: rgb(32, 32, 32);
-  font-size: 125%;
-  font-family: instSer;
 }
 nav ul {
   display: flex;
