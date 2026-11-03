@@ -14,24 +14,67 @@ if (debugging) {
 debug.textContent += "debugging enabled";
 
 const workingId = "gallery";
-const path = "./images";
-const baseName = "01";
-const first = "0";
-const last = "10";
-const format = ".jpg";
+// let path = "./images";
+// let baseName = "01";
+// let first = "0";
+// let last = "10";
+// let format = ".jpg";
 
 const galId = document.getElementById(workingId);
-document.addEventListener("DOMContentLoaded", () => fillTheGallery());
+document.addEventListener("DOMContentLoaded", () => doTheThingDoTheGood());
 
 debug.textContent += ",  id and event listener OK";
 
 debug.textContent += ",  const ok";
 
-function fillTheGallery() {
+// Need to change things up. The gallery site
+// needs images from more than one subfolder
+
+let megaList = [];
+function doTheThingDoTheGood() {
+  let pathCE = "./images/grafikk";
+  let baseNameCE = "grafikk";
+  let firstCE = "1";
+  let lastCE = "31";
+  let formatCE = ".jpg";
+  let ce = fillTheGallery(pathCE, baseNameCE, firstCE, lastCE, formatCE);
+
+  let pathKH = "./images/kh";
+  let baseNameKH = "kh";
+  let firstKH = "1";
+  let lastKH = "59";
+  let formatKH = ".jpg";
+  let kh = fillTheGallery(pathKH, baseNameKH, firstKH, lastKH, formatKH);
+
+  // megaList.push(ce);
+  // megaList.push(kh);
+
+  debug.textContent += ",  gHTMLc = " + megaList;
+  debug.textContent +=
+    ",                                                                      ghtmlc # 11 = " +
+    megaList[10];
+
+  megaList = fisherYatesShuffle(megaList);
+  let i = 0;
+  for (i in megaList) {
+    galId.innerHTML += megaList[i];
+  }
+}
+
+// aka knuth shuffle. found on w3schools
+function fisherYatesShuffle(arr) {
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
+function fillTheGallery(path, baseName, first, last, format) {
   let list = [];
   let i = first;
 
-  galId.innerHTML = "";
+  // galId.innerHTML = "";
   debug.textContent += ",  loop starting";
 
   for (i; i <= last; i++) {
@@ -46,10 +89,11 @@ function fillTheGallery() {
       format +
       '" alt="" class="galImg" />';
 
-    galId.innerHTML += stringToAdd;
-    list.push(stringToAdd);
+    // galId.innerHTML += stringToAdd;
+    megaList.push(stringToAdd);
     debug.textContent += ",  " + list[i];
   }
 
   debug.textContent += ",  loop done";
+  return list;
 }
