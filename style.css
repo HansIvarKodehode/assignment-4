@@ -56,9 +56,6 @@ body {
   font-size: 110%;
   font-family: "instSer";
 }
-br {
-  height: 0.5rem;
-}
 p {
   margin: 0.5rem 0;
 }
@@ -115,6 +112,12 @@ nav ul li {
 .mid {
   align-self: center;
 }
+.justBetween {
+  justify-content: space-between;
+}
+.justAround {
+  justify-content: space-around;
+}
 
 /* footer */
 footer {
@@ -127,7 +130,7 @@ footer {
 .split {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 .theVeryBottom {
   display: flex;
@@ -217,12 +220,27 @@ footer {
   display: flex;
   flex-direction: row;
   width: 100%;
+  border-top: 1px black solid;
 }
 .info {
   width: 70%;
+  border-right: 1px solid black;
+  padding: 1.5rem 1rem 0.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  gap: 0.75rem;
+}
+.thirds {
+  width: 33%;
+}
+.stayInTheMiddle {
+  margin: 0 auto;
 }
 .images {
   width: 30%;
+  gap: 0.0625rem;
+  background-color: black;
 }
 
 /* text specific boxes */
