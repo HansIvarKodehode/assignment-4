@@ -45,7 +45,7 @@ function fillTheGallery() {
       i +
       ")" +
       format +
-      '" alt="" class="' +
+      '" alt="this image is generated with javascript. No actual description is avilable" class="' +
       imgClass +
       '" />';
 

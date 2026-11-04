@@ -87,7 +87,7 @@ function fillTheGallery(path, baseName, first, last, format) {
       i +
       ")" +
       format +
-      '" alt="" class="galImg" />';
+      '" alt="this image is generated with javascript. No actual description is avilable" class="galImg" />';
 
     // galId.innerHTML += stringToAdd;
     megaList.push(stringToAdd);
