@@ -65,9 +65,13 @@ header {
   align-items: center;
   border-bottom: 1px solid whitesmoke;
   padding: 5px 5px 5px 5px;
+  flex-wrap: wrap;
 }
 .logo {
   max-height: 4rem;
+}
+nav ul {
+  flex-wrap: wrap;
 }
 button {
   background-color: transparent;
