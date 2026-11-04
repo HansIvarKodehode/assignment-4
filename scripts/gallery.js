@@ -59,6 +59,7 @@ function doTheThingDoTheGood() {
   for (i in megaList) {
     galId.innerHTML += megaList[i];
   }
+  console.log("it works");
 }
 
 // aka knuth shuffle. found on w3schools
